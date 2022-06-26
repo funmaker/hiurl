@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hidden in URL</title>
+    <link rel="stylesheet" type="text/css" href="generator.css" />
+    <script src="qrious.min.js"></script>
+</head>
+<body>
+    <section>
+        <label for="code">HTML Code</label>
+        <textarea id="code"></textarea>
+        <div class="buttons">
+            <button id="gen">Generate Link</button>
+            <button id="genQr">Generate QR Code</button>
+        </div>
+    </section>
+    <section class="side">
+        <label for="preview">Preview</label>
+        <iframe id="preview"></iframe>
+        <div class="buttons">
+            <button>Preview</button>
+            <div class="checkboxes">
+                <label><input type="checkbox" id="autoUpdate" checked /> Auto Update</label>
+                <label><input type="checkbox" id="execJS" /> Execute JavaScript</label>
+            </div>
+        </div>
+    </section>
+    <div id="qrCodeWrap" class="dimmer">
+        <div class="modal">
+            <a href="#" download="qrPage.png" id="qrCodeLink">
+                <img id="qrCode" class="qrCode">
+            </a>
+            <div id="closeIcon" class="closeIcon">✕</div>
+        </div>
+    </div>
+
+    <script src="generator.js"></script>
+</body>
+</html>

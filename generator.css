@@ -1,0 +1,102 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.side {
+    flex: 1;
+}
+
+textarea {
+    flex: 1;
+    width: calc(50vw - 2em);
+    resize: horizontal;
+    min-width: 100%;
+}
+
+iframe {
+    flex: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding-top: 1em;
+    white-space: nowrap;
+}
+
+button {
+    padding: 0.5em;
+    font-size: 200%;
+    min-width: 8em;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dimmer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+    padding: 1.5em;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 1em;
+}
+
+.qrCode {
+    width: auto;
+    max-height: calc(100vh - 5em);
+}
+
+.closeIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 200%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+    color: black;
+}
+
+.closeIcon:focus, .closeIcon:hover {
+    opacity: 1.0;
+}
