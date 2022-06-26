@@ -3,6 +3,7 @@ let iframe = document.getElementById("preview");
 const code = document.getElementById("code");
 const genBtn = document.getElementById("gen");
 const genQrBtn = document.getElementById("genQr");
+const updateBtn = document.getElementById("update");
 const autoUpdateCb = document.getElementById("autoUpdate");
 const execJSCb = document.getElementById("execJS");
 const qrCodeCanvas = document.getElementById("qrCode");
@@ -41,6 +42,7 @@ function updateIframe() {
   iframe.contentWindow.document.write(getCode());
   iframe.contentWindow.document.close();
 }
+updateBtn.addEventListener("click", updateIframe);
 code.addEventListener("input", () => {
   if(autoUpdate) updateIframe();
 });

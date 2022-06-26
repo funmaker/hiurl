@@ -10,7 +10,7 @@
         <label for="code">HTML Code</label>
         <textarea id="code"></textarea>
         <div class="buttons">
-            <button id="gen">Generate Link</button>
+            <button id="gen">Copy Link</button>
             <button id="genQr">Generate QR Code</button>
         </div>
     </section>
@@ -18,17 +18,18 @@
         <label for="preview">Preview</label>
         <iframe id="preview"></iframe>
         <div class="buttons">
-            <button>Preview</button>
+            <button id="update">Update</button>
             <div class="checkboxes">
                 <label><input type="checkbox" id="autoUpdate" checked /> Auto Update</label>
                 <label><input type="checkbox" id="execJS" /> Execute JavaScript</label>
             </div>
         </div>
     </section>
+    <a href="https://github.com/funmaker/hiurl" class="githubLink" target="_blank"><img src="github.png" alt="GitHub" ></a>
     <div id="qrCodeWrap" class="dimmer">
         <div class="modal">
             <a href="#" download="qrPage.png" id="qrCodeLink">
-                <img id="qrCode" class="qrCode">
+                <img id="qrCode" class="qrCode" alt="qrCode">
             </a>
             <div id="closeIcon" class="closeIcon">✕</div>
         </div>

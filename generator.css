@@ -7,11 +7,16 @@
 
 html {
     height: 100%;
+    background-color: #293031;
+    color: white;
 }
 
 body {
     display: flex;
     height: 100%;
+    position: relative;
+    width: fit-content;
+    min-width: 100vw;
 }
 
 section {
@@ -29,10 +34,17 @@ textarea {
     width: calc(50vw - 2em);
     resize: horizontal;
     min-width: 100%;
+    padding: 0.5em;
+    background-color: rgba(26, 38, 51, 0.44);
+    color: white;
+    border-radius: 0.5em;
+    outline: none;
 }
 
 iframe {
     flex: 1;
+    background-color: white;
+    border-radius: 0.5em;
 }
 
 .buttons {
@@ -70,7 +82,7 @@ button {
 
 .modal {
     position: relative;
-    padding: 1.5em;
+    padding: 2em;
     background: white;
     border: 1px solid lightgray;
     border-radius: 1em;
@@ -78,7 +90,7 @@ button {
 
 .qrCode {
     width: auto;
-    max-height: calc(100vh - 5em);
+    max-height: calc(100vh - 6em);
 }
 
 .closeIcon {
@@ -99,4 +111,22 @@ button {
 
 .closeIcon:focus, .closeIcon:hover {
     opacity: 1.0;
+}
+
+.githubLink {
+    position: absolute;
+    top: 0;
+    right: 0.75em;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
+.githubLink:hover, .githubLink:focus {
+    opacity: 1;
+}
+
+.githubLink img {
+    height: 2em;
+    width: auto;
+    margin: 0.25em;
 }
